@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>auto-scroller demo</title>
+    <meta name="description" content="">
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Chrome / Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="black">
+    <link rel="icon" href="icon.png">
+
+    <!-- Safari / iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+    <style>
+      body, html {
+        margin: 0;
+      }
+      body {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow-y: hidden;
+        pointer-events: none;
+      }
+      .container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #EEE;
+      }
+      section {
+        background: #99bb99;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: calc(100% / 5 * 2);
+      }
+      .bg {
+        background: #99aa99;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        1
+      </section>
+      <section class="bg">
+        2
+      </section>
+      <section>
+        3
+      </section>
+      <section class="bg">
+        4
+      </section>
+    </div>
+  </body>
+  <script src="../dist/auto-scroller.js"></script>
+  <script>
+    let scroller = new AutoScroller({target: document.querySelector('.container')});
+    scroller.scrollSpeed = 1;
+  </script>
+</html>

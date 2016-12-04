@@ -1,0 +1,25 @@
+{
+  "name": "auto-scroller",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/auto-scroller.js",
+  "scripts": {
+    "docs": "esdoc -c esdoc.json",
+    "build": "gulp build && npm run docs",
+    "serve": "polymer serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "vandeurenglenn/auto-scroller"
+  },
+  "author": "Glenn Vandeuren <vandeurenglenn@gmail.com>",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

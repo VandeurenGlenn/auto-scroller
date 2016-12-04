@@ -1,0 +1,23 @@
+{
+  "name": "auto-scroller",
+  "description": "",
+  "main": "auto-scroller.html",
+  "authors": [
+    "Glenn Vandeuren <vandeurenglenn@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "auto-scroll",
+    "auto-scroller",
+    "scroll",
+    "scroller"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

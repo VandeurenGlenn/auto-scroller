@@ -6,6 +6,9 @@
 dist
 tmp
 
+# Documentation
+docs
+
 ##########
 # Web
 ##########

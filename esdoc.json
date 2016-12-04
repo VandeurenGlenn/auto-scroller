@@ -1,0 +1,8 @@
+{
+  "source": "./dist",
+  "destination": "./docs",
+  "index": "./README.md",
+  "package": "./package.json",
+  "includes": ["\\.(es6.js)$"],
+  "access": ["public", "private"]
+}
