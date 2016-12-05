@@ -1,6 +1,7 @@
 {
   "name": "auto-scroller",
   "description": "",
+  "version": "0.1.0",
   "main": "auto-scroller.html",
   "authors": [
     "Glenn Vandeuren <vandeurenglenn@gmail.com>"
