@@ -138,16 +138,21 @@ class AutoScroller extends HTMLElement {
      this._scroll(this.target);
    }
 
+   rerender() {
+     let scrollingElement = this.target.scrollingElement || this.target;
+     this._scrollHeight = (scrollingElement.scrollHeight / 3);
+   }
+
    /**
     * @param {HTMLElement} target the chosen target to scroll
     */
    _scroll(target) {
      let scrollSpeed = this.scrollSpeed;
      let scrollingElement = target.scrollingElement || target;
-     let scrollHeight = (scrollingElement.scrollHeight / 3);
+     this._scrollHeight = (scrollingElement.scrollHeight / 3);
 
      setInterval(() => {
-       if (this.previousScrollPosition === scrollHeight) {
+       if (this.previousScrollPosition === this._scrollHeight) {
          this.scrolledBottom = true;
       } else if (this.previousScrollPosition === 0) {
         this.scrolledBottom = false;
@@ -158,7 +163,7 @@ class AutoScroller extends HTMLElement {
       } else {
         this.scrollPosition += this.scrollSpeed / 32;
       }
-      this.scrollPosition = this._between(this.scrollPosition, 0, scrollHeight);
+      this.scrollPosition = this._between(this.scrollPosition, 0, this._scrollHeight);
       requestAnimationFrame(() => {
         scrollingElement.style.transform = 'translateY(-' + this.scrollPosition + 'px)';
       });
